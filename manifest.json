@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "Consider It Sorted",
+  "version": "0.1.0",
+  "description": "Save what you love. Find it when it matters. Sorts your Instagram saves into albums, right in your browser.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.instagram.com/*"],
+      "js": ["rules.js", "sorter.js", "content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
